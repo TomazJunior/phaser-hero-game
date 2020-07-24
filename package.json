@@ -1,0 +1,46 @@
+{
+  "name": "phaser3-tutorial",
+  "version": "1.0.0",
+  "description": "Phaser 3 Tutorial",
+  "author": "Tomaz Júnior",
+  "license": "MIT",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack",
+    "start": "npm run build && webpack-dev-server --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@develephant/types-phaser": "^1.0.1",
+    "babel": "^6.23.0",
+    "browser-sync": "^2.23.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "phaser": "^3.6.0",
+    "raw-loader": "^0.5.1",
+    "webpack-split-chunks": "^0.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^7.5.0",
+    "file-loader": "^6.0.0",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "keywords": [
+    "2D",
+    "HTML5",
+    "WebGL",
+    "canvas",
+    "game",
+    "javascript",
+    "physics",
+    "phaser",
+    "game engine"
+  ]
+}
