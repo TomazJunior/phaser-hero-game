@@ -1,13 +1,16 @@
 {
-  "name": "phaser3-tutorial",
+  "name": "phaser-hero-game",
   "version": "1.0.0",
-  "description": "Phaser 3 Tutorial",
+  "description": "phaser 3 - hero game with typescript",
   "author": "Tomaz Júnior",
   "license": "MIT",
   "main": "index.html",
+  "homepage": "http://TomazJunior.github.io/phaser-hero-game",
   "scripts": {
     "build": "webpack",
-    "start": "npm run build && webpack-dev-server --host 0.0.0.0"
+    "start": "npm run build && webpack-dev-server --host 0.0.0.0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@develephant/types-phaser": "^1.0.1",
@@ -21,10 +24,12 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
+    "@types/webpack-env": "^1.15.2",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.5.0",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.0.1",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.43.0",

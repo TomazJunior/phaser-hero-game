@@ -16,6 +16,20 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      },
+      {
+        test: [ /\.vert$/, /\.frag$/ ],
+        use: 'raw-loader'
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: 'file-loader',
+      }
     ],
   },
 
@@ -42,10 +56,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: 'index.html',
+          from: 'index.html'
         },
         {
-          from: 'assets/**/*',
+          from: 'assets/**/*'
         },
       ],
     }),

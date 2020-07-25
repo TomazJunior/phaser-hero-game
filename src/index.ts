@@ -1,16 +1,17 @@
 'use strict';
 import * as Phaser from 'phaser';
 
-//Resolves to node_modules
 import MainScene from './scenes/MainScene';
-
-// import TitleScene from './TitleScene';
-// import LevelsScene from './OverWorldScene';
 
 let config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    parent: 'phaser-example',
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 800,
+    height: 600
+  },
   physics: {
     default: 'arcade',
     arcade: {
