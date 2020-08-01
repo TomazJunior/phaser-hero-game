@@ -1,13 +1,15 @@
 'use strict';
 import * as Phaser from 'phaser';
-import Stars from '../items/Stars';
-import { NUMBER_OF_STARS } from '../configs/game-configs';
-import Bombs from '../items/Bombs';
-import { ALL_STARS_COLLECTED, STAR_COLLECTED, BOMB_HITTED, PLAYER_RESETED } from '../events/events';
-import Hero from '../characters/Hero';
+
 import { createHeroAnims } from '../anims/heroAnims';
-import Platforms from '../items/Platforms';
+import Hero from '../characters/Hero';
 import ScoreText from '../components/ScoreText';
+import { NUMBER_OF_STARS } from '../configs/game-configs';
+import { ALL_STARS_COLLECTED, BOMB_HITTED, PLAYER_RESETED, STAR_COLLECTED } from '../events/events';
+import Bombs from '../items/Bombs';
+import Platforms from '../items/Platforms';
+import Stars from '../items/Stars';
+import WebsocketService from '../utils/WebsocketService';
 
 export default class MainScene extends Phaser.Scene {
   
@@ -37,6 +39,8 @@ export default class MainScene extends Phaser.Scene {
   }
 
   create(){
+    new WebsocketService();
+    
     this.add.image(400, 300, 'sky');
     
     this.platforms = new Platforms(this);

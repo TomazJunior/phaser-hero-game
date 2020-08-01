@@ -2,7 +2,7 @@ export default class ScoreText extends Phaser.GameObjects.BitmapText {
   private _score: integer;
   
   constructor(scene: Phaser.Scene, x: number, y: number) {
-    super(scene, x, y, "pixelFont", "", 16);
+    super(scene, x, y, "pixelFont", "", 20);
     scene.add.existing(this);
     this.score = 0;
   }

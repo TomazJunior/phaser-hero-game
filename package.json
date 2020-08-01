@@ -14,12 +14,14 @@
   },
   "dependencies": {
     "@develephant/types-phaser": "^1.0.1",
+    "@types/websocket": "^1.0.1",
     "babel": "^6.23.0",
     "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "phaser": "^3.6.0",
     "raw-loader": "^0.5.1",
-    "webpack-split-chunks": "^0.2.1"
+    "webpack-split-chunks": "^0.2.1",
+    "websocket": "^1.0.31"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
